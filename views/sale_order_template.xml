@@ -1,0 +1,28 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record  model="ir.ui.view" id="sale_order_view_form_inherit">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='sales_person']//field[@name='client_order_ref']" position="replace"/>
+                <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                    <field name="client_order_ref"/>
+                </xpath>
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <label for="lead_time"/>
+                    <div>
+                        <field name="lead_time" string="Lead Time" class="oe_inline"/> days
+                    </div>
+                    <label for="incoterm"/>
+                    <div>
+                        <field name="incoterm" string="Incoterms" class="oe_inline"/>
+                        <field name="ports_id" string="Incoterms Port" class="oe_inline"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
