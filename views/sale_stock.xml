@@ -1,0 +1,8 @@
+?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="sale_stock.view_order_form_inherit_incoterms" name="sale.stock_view_inherit" inherit_id="sale_stock.view_order_form_inherit_sale_stock">
+            <xpath expr="//field[@name='incoterm']" position="replace"/>
+        </template>
+    </data>
+</odoo>
