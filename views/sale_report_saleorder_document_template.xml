@@ -3,10 +3,8 @@
     <template id="sale.report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
         <xpath expr="//div[@class='page']" position="attributes">
             <attribute name="style">font-family: Arimo; font-size: 11px;</attribute>
-        </xpath>
-        
-        <xpath expr="//h2" position="replace"/>
-        
+        </xpath>        
+        <xpath expr="//h2" position="replace"/>        
         <xpath expr="//div[@class='page']//div[1]" position="before">
             <h2>
                 <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
@@ -122,10 +120,8 @@
                 </div>
             </div>
             <div class="clearfix"/>
-        </xpath>
-        
+        </xpath>        
         <xpath expr="//div[@id='informations']" position="replace"/>
-
         <xpath expr="//table[@class='table table-condensed']//thead" position="replace">
             <tr>
                 <th>No.</th>
@@ -135,8 +131,7 @@
                 <th class="text-right" groups="sale.group_show_price_subtotal">Amount</th>
                 <th class="text-right price_tax_included" groups="sale.group_show_price_total">Total Price</th>
             </tr>
-        </xpath>
-        
+        </xpath>        
         <xpath expr="//tbody[@class='sale_tbody']" position="replace">
             <t t-foreach="page" t-as="layout_category">
                 <t t-if="layout_category_size &gt; 1 or page_size &gt; 1" groups="sale.group_sale_layout">
@@ -188,8 +183,7 @@
                     </tr>
                 </t>
             </t>
-        </xpath>
-        
+        </xpath>        
         <xpath expr="//p[@t-if='doc.payment_term_id.note']" position="replace"/>
     </template>
 </odoo>
