@@ -25,7 +25,17 @@
 					<t t-foreach="layout_category['lines']" t-as="line">
 						<tr>
 							<td>
+								<span t-field="x_line.name"/>
+							</td>
+							<td>
+								<t t-if="line.x_tag_no">
+									<span>Tag No.: </span><span t-field="line.x_tag_no"/><br />
+								</t>
 								<span t-field="line.name"/>
+								<t t-if="line.x_notes">
+									<br /><span>--------</span><br/>
+									<span t-field="line.x_notes"/>
+								</t>
 							</td>
 							<td>
 								<div id="quote_qty">
