@@ -44,6 +44,13 @@
 							<span t-field="quotation.ports_id"/>
 						</div>
 						<div class="clearfix"/>
+						<div t-if="quotation.carrier_id">
+							<label class="col-sm-5 col-xs-5 text-right">Delivery Method:</label>
+							<div class="col-sm-7 col-xs-7">
+								<span t-field="quotation.carrier_id"/>
+							</div>
+						</div>
+						<div class="clearfix"/>
 						<label class="col-sm-5 col-xs-5 text-right">Lead Time:</label>
 						<div class="col-sm-7 col-xs-7">
 							<span t-field="quotation.lead_time"/><![CDATA[&nbsp;]]>days
