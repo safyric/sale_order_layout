@@ -25,7 +25,7 @@
 					<t t-foreach="layout_category['lines']" t-as="line">
 						<tr>
 							<td>
-								<span t-field="x_line.name"/>
+								<span t-field="line.x_line_no"/>
 							</td>
 							<td>
 								<t t-if="line.x_tag_no">
