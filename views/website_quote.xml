@@ -41,7 +41,7 @@
 							<label class="col-sm-5 col-xs-5 text-right">Incoterms:</label>
 						<div class="col-sm-7 col-xs-7">
 							<span t-field="quotation.incoterm.code"/><![CDATA[&nbsp;]]>
-							<span t-field="quotation.delivery_points_id"/>
+							<span t-field="quotation.delivery_points"/>
 						</div>
 						<div class="clearfix"/>
 						<div t-if="quotation.carrier_id">
