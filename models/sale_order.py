@@ -16,7 +16,7 @@ class SaleOrder(models.Model):
         help="Number of days between the order confirmation and the shipping of the products to the customer")
 
     use_payment_note = fields.Boolean(string='Payment Term Note')
-    payment_term_note = fields.Text(string='Payment Term Note')
+    payment_note = fields.Text(string='Payment Term Note')
     use_incoterms_note = fields.Boolean(string='Incoterms Note')
     incoterms_note = fields.Text(string='Incoterms Note')
     use_leadtime_note = fields.Boolean(string='Lead Time Note')
