@@ -42,7 +42,7 @@
 					<div class="o_setting_right_pane">
 						<label for="use_incoterms_note"/>
 						<div class="text-muted">
-							Show notes to incoterm on orders
+							Show notes to incoterms on orders
 						</div>
 						<div class="content-group" attrs="{'invisible': [('use_incoterms_note','=',False)]}">
 							<div class="mt16">
@@ -56,7 +56,7 @@
 					<div class="o_setting_right_pane">
 						<label for="use_leadtime_note"/>
 						<div class="text-muted">
-							Show notes to payment terms on orders
+							Show notes to lead time on orders
 						</div>
 						<div class="content-group" attrs="{'invisible': [('use_leadtime_note','=',False)]}">
 							<div class="mt16">
