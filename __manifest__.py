@@ -15,7 +15,7 @@
         'views/sale_order_template.xml',
         'views/sale_stock.xml',
         'views/website_quote_pricing.xml',
-		'views/website_quote.xml',
+	'views/website_quote.xml',
     ],
     'installable': True,
 }
