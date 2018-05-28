@@ -76,7 +76,7 @@
 				<t t-if="page_index == page_size - 1">
 					<t t-if="any([line.tax_id for line in quotation.order_line])">
 						<tr>
-							<td/><td/>
+							<td/><td/><td/>
 							<td class="text-right"><strong>Subtotal:</strong></td>
 							<td class="text-right">
 								<strong data-id="total_amount" t-field="quotation.amount_untaxed" t-options="{&quot;widget&quot;: &quot;monetary&quot;,&quot;display_currency&quot;: quotation.pricelist_id.currency_id}"/>
@@ -84,7 +84,7 @@
 							<td/>
 						</tr>
 						<tr>
-							<td/><td/>
+							<td/><td/><td/>
 							<td class="text-right">Taxes:</td>
 							<td class="text-right">
 								<span data-id="total_amount" t-field="quotation.amount_tax" t-options="{&quot;widget&quot;: &quot;monetary&quot;,&quot;display_currency&quot;: quotation.pricelist_id.currency_id}"/>
@@ -93,7 +93,7 @@
 						</tr>
 					</t>
 					<tr>
-						<td/><td/>
+						<td/><td/><td/>
 						<td class="text-right"><strong>Total:</strong></td>
 						<td class="text-right">
 							<strong data-id="total_amount" t-field="quotation.amount_total" t-options="{&quot;widget&quot;: &quot;monetary&quot;,&quot;display_currency&quot;: quotation.pricelist_id.currency_id}"/>
