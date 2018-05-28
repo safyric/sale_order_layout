@@ -21,7 +21,7 @@
 						<field name="delivery_points" string="Delivery Point" class="oe_inline"/>
 					</div>
 				</xpath>
-				<xpath expr="//div[@class='oe_clear']" position="after">
+				<xpath expr="//field[@name='note']" position="after">
 					<div class="o_setting_left_pane">
 						<field name="use_payment_note"/>
 					</div>
