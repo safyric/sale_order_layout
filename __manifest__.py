@@ -7,7 +7,7 @@
 
 	'depends': [
         'sale_management',
-        'stock_delivery_ports',
+        'stock_delivery_points',
     ],
 
     'data': [
