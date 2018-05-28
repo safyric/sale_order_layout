@@ -18,7 +18,7 @@
 					<label for="incoterm"/>
 					<div>
 						<field name="incoterm" string="Incoterms" class="oe_inline"/><![CDATA[&nbsp;]]>
-						<field name="ports_id" string="Incoterms Port" class="oe_inline"/>
+						<field name="delivery_points_id" string="Delivery Point" class="oe_inline"/>
 					</div>
 				</xpath>
 			</field>
