@@ -6,7 +6,7 @@
 				<th>No.</th>
 				<th>Products</th>
 				<th class="text-right">Qty</th>
-				<th>Uom</th>
+				<th>UoM</th>
 				<th class="text-right">Unit Price</th>
 				<th class="text-right" groups="sale.group_show_price_subtotal">Amount</th>
 				<th class="text-right price_tax_included" groups="sale.group_show_price_total">Total Price</th>
@@ -32,8 +32,8 @@
 								<t t-if="line.x_tag_no">
 									<span>Tag No.: </span><span t-field="line.x_tag_no"/><br />
 								</t>
-								<span class="hidden-xs" t-field="line.default_code"/>
-								<span class="visible-xs-inline" t-field="line.name"/>
+								<span class="hidden-xs" t-field="line.name"/>
+								<span class="visible-xs-inline" t-field="line.default_code"/>
 								<t t-if="line.x_notes">
 									<br /><span>--------</span><br/>
 									<span t-field="line.x_notes"/>
