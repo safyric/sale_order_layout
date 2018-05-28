@@ -5,7 +5,8 @@
 			<xpath expr="//table//thead//tr" position="replace">
 				<th>No.</th>
 				<th>Products</th>
-				<th>Quantity</th>
+				<th class="text-right">Qty</th>
+				<td>Uom</td>
 				<th class="text-right">Unit Price</th>
 				<th class="text-right" groups="sale.group_show_price_subtotal">Amount</th>
 				<th class="text-right price_tax_included" groups="sale.group_show_price_total">Total Price</th>
@@ -15,7 +16,7 @@
 				<t t-foreach="page" t-as="layout_category">
 					<t t-if="layout_category_size &gt; 1 or page_size &gt; 1" groups="sale.group_sale_layout">
 						<tr class="active">
-							<td colspan="7" style="font-weight: bold; border-bottom: 1px solid black;">&amp;bull;
+							<td colspan="8" style="font-weight: bold; border-bottom: 1px solid black;">&amp;bull;
 								<t t-esc="layout_category['name']"/>
 							</td>
 						</tr>
@@ -37,9 +38,13 @@
 									<span t-field="line.x_notes"/>
 								</t>
 							</td>
-							<td>
+							<td class="text-right">
 								<div id="quote_qty">
 									<span t-field="line.product_uom_qty"/>
+								</div>
+							</td>
+							<td>
+								<div>
 									<span t-field="line.product_uom"/>
 								</div>
 							</td>
@@ -76,7 +81,7 @@
 				<t t-if="page_index == page_size - 1">
 					<t t-if="any([line.tax_id for line in quotation.order_line])">
 						<tr>
-							<td/><td/><td/>
+							<td/><td/><td/><td/>
 							<td class="text-right"><strong>Subtotal:</strong></td>
 							<td class="text-right">
 								<strong data-id="total_amount" t-field="quotation.amount_untaxed" t-options="{&quot;widget&quot;: &quot;monetary&quot;,&quot;display_currency&quot;: quotation.pricelist_id.currency_id}"/>
@@ -84,7 +89,7 @@
 							<td/>
 						</tr>
 						<tr>
-							<td/><td/><td/>
+							<td/><td/><td/><td/>
 							<td class="text-right">Taxes:</td>
 							<td class="text-right">
 								<span data-id="total_amount" t-field="quotation.amount_tax" t-options="{&quot;widget&quot;: &quot;monetary&quot;,&quot;display_currency&quot;: quotation.pricelist_id.currency_id}"/>
@@ -93,7 +98,7 @@
 						</tr>
 					</t>
 					<tr>
-						<td/><td/><td/>
+						<td/><td/><td/><td/>
 						<td class="text-right"><strong>Total:</strong></td>
 						<td class="text-right">
 							<strong data-id="total_amount" t-field="quotation.amount_total" t-options="{&quot;widget&quot;: &quot;monetary&quot;,&quot;display_currency&quot;: quotation.pricelist_id.currency_id}"/>
