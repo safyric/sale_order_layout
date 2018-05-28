@@ -11,7 +11,7 @@
 			<xpath expr="//div[@id='introduction']//h1//small" position="replace"/>
 
 			<xpath expr="//t[@name='Quotation Content']//div[2]/div[2]" position="replace">
-				<div class="col-md-6 col-xs-6">
+				<div class="col-md-6 col-xs-12">
 					<div class="row">
 						<label class="col-sm-5 col-xs-5 text-right">Your Contact:</label>
 						<div class="col-sm-7 col-xs-7">
@@ -67,7 +67,7 @@
 			</xpath>
 			
 			<xpath expr="//t[@name='Quotation Content']//div[2]/div[1]" position="replace">
-				<div class="col-md-6 col-xs-6">
+				<div class="col-md-6 col-xs-12">
 					<div class="row">
 						<label class="col-sm-4 col-xs-4 text-right">Customer:</label>
 						<div t-if="quotation.state in ('draft','sent','cancel')" class="col-sm-8 col-xs-8">
