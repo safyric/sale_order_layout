@@ -6,7 +6,7 @@
 				<th>No.</th>
 				<th>Products</th>
 				<th class="text-right">Qty</th>
-				<td>Uom</td>
+				<th>Uom</th>
 				<th class="text-right">Unit Price</th>
 				<th class="text-right" groups="sale.group_show_price_subtotal">Amount</th>
 				<th class="text-right price_tax_included" groups="sale.group_show_price_total">Total Price</th>
