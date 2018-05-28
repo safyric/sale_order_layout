@@ -33,7 +33,7 @@
 									<span>Tag No.: </span><span t-field="line.x_tag_no"/><br />
 								</t>
 								<span class="hidden-xs" t-field="line.name"/>
-								<span class="visible-xs-inline" t-field="line.default_code"/>
+								<span class="visible-xs-inline" t-field="line.product_id"/>
 								<t t-if="line.x_notes">
 									<br /><span>--------</span><br/>
 									<span t-field="line.x_notes"/>
