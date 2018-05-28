@@ -22,51 +22,53 @@
 					</div>
 				</xpath>
 				<xpath expr="//field[@name='note']" position="after">
-					<div class="col-xs-12 col-md-6 o_setting_box">
-						<div class="o_setting_left_pane">
-							<field name="use_payment_note"/>
-						</div>
-						<div class="o_setting_right_pane">
-							<label for="use_payment_note"/>
-							<div class="text-muted">
-								Show notes to payment terms on orders
+					<div class="row mt16 o_settings_container">
+						<div class="col-xs-12 col-md-6 o_setting_box">
+							<div class="o_setting_left_pane">
+								<field name="use_payment_note"/>
 							</div>
-							<div class="content-group" attrs="{'invisible': [('use_payment_note','=',False)]}">
-								<div class="mt16">
-									<field name="payment_note" placeholder="Insert your notes here..."/>
+							<div class="o_setting_right_pane">
+								<label for="use_payment_note"/>
+								<div class="text-muted">
+									Show notes to payment terms on orders
+								</div>
+								<div class="content-group" attrs="{'invisible': [('use_payment_note','=',False)]}">
+									<div class="mt16">
+										<field name="payment_note" placeholder="Insert your notes here..."/>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 					
-					<div class="col-xs-12 col-md-6 o_setting_box">
-						<div class="o_setting_left_pane">
-							<field name="use_incoterms_note"/>
-						</div>
-						<div class="o_setting_right_pane">
-							<label for="use_incoterms_note"/>
-							<div class="text-muted">
-								Show notes to incoterms on orders
+						<div class="col-xs-12 col-md-6 o_setting_box">
+							<div class="o_setting_left_pane">
+								<field name="use_incoterms_note"/>
 							</div>
-							<div class="content-group" attrs="{'invisible': [('use_incoterms_note','=',False)]}">
-								<div class="mt16">
-									<field name="incoterms_note" placeholder="Insert your notes here..."/>
+							<div class="o_setting_right_pane">
+								<label for="use_incoterms_note"/>
+								<div class="text-muted">
+									Show notes to incoterms on orders
+								</div>
+								<div class="content-group" attrs="{'invisible': [('use_incoterms_note','=',False)]}">
+									<div class="mt16">
+										<field name="incoterms_note" placeholder="Insert your notes here..."/>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-xs-12 col-md-6 o_setting_box">
-						<div class="o_setting_left_pane">
-							<field name="use_leadtime_note"/>
-						</div>
-						<div class="o_setting_right_pane">
-							<label for="use_leadtime_note"/>
-							<div class="text-muted">
-								Show notes to lead time on orders
+						<div class="col-xs-12 col-md-6 o_setting_box">
+							<div class="o_setting_left_pane">
+								<field name="use_leadtime_note"/>
 							</div>
-							<div class="content-group" attrs="{'invisible': [('use_leadtime_note','=',False)]}">
-								<div class="mt16">
-									<field name="leadtime_note" placeholder="Insert your notes here..."/>
+							<div class="o_setting_right_pane">
+								<label for="use_leadtime_note"/>
+								<div class="text-muted">
+									Show notes to lead time on orders
+								</div>
+								<div class="content-group" attrs="{'invisible': [('use_leadtime_note','=',False)]}">
+									<div class="mt16">
+										<field name="leadtime_note" placeholder="Insert your notes here..."/>
+									</div>
 								</div>
 							</div>
 						</div>
