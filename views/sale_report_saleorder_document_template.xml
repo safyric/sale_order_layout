@@ -186,7 +186,27 @@
                     </tr>
                 </t>
             </t>
-        </xpath>        
+        </xpath>
+        <xpath expr="//p[@t-field='doc.note']" position="before">
+            <t t-if="doc.use_payment_note or doc.use_leadtime_note or doc.use_incoterms_note">
+                <h2>Remarks</h2>
+                <t t-if="doc.use_payment_note">
+                    <p><span>* </span><span t-field="doc.payment_note"/></p>
+                </t>
+                <t t-if="doc.use_leadtime_note">
+                    <p><span>* </span><span t-field="doc.leadtime_note"/></p>
+                </t>
+                <t t-if="doc.use_incoterms_note">
+                    <p><span>* </span><span t-field="doc.incoterms_note"/></p>
+                </t>
+            </t>
+        </xpath>
+        <xpath expr="//p[@t-field='doc.note']" position="replace">
+            <t t-if="doc.note">
+                <h2>Terms &amp; Conditions</h2>
+                <p t-field="doc.note"/>
+            </t>
+        </xpath>     
         <xpath expr="//p[@t-if='doc.payment_term_id.note']" position="replace"/>
     </template>
 </odoo>
