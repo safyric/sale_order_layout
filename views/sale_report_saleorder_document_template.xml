@@ -57,16 +57,6 @@
                         <span t-field="doc.date_order"/>
                     </div>
                 </div>
-                <t t-if="doc.old_revision_ids">
-                    <div class="row">
-                        <div class="col-xs-5 text-right">
-                            <strong>Last Revision:</strong>
-                        </div>
-                        <div class="col-xs-7">
-                            <span t-field="doc.old_revision_ids.create_date" domain="[('active','=',True)]"/>
-                        </div>
-                    </div>
-                </t>
                 <div class="row">
                     <div class="col-xs-5 text-right">
                         <strong>Expiration Date:</strong>
