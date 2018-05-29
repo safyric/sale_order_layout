@@ -8,7 +8,7 @@
 			<field name="arch" type="xml">
 				<xpath expr="//group[@name='sales_person']//field[@name='client_order_ref']" position="replace"/>
 				<xpath expr="//field[@name='partner_shipping_id']" position="after">
-					<field name="client_order_ref"/>
+					<field name="client_order_ref" attrs="{'readonly':[('state', '=', 'sent')]}"/>
 				</xpath>
 				<xpath expr="//field[@name='payment_term_id']" position="after">
 					<label for="lead_time"/>
