@@ -57,7 +57,7 @@
                         <span t-field="doc.date_order"/>
                     </div>
                 </div>
-                <t t-if="doc.current_revision_id">
+                <t t-if="doc.old_revision_ids">
                     <div class="row">
                         <div class="col-xs-5 text-right">
                             <strong>Last Revision:</strong>
