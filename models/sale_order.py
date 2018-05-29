@@ -21,3 +21,5 @@ class SaleOrder(models.Model):
     incoterms_note = fields.Text(string='Incoterms Note')
     use_leadtime_note = fields.Boolean(string='Lead Time Note')
     leadtime_note = fields.Text(string='Lead Time Note')
+    use_other_note = fields.Boolean(string='Other Note')
+    other_note = fields.Text(string='Other Note')
