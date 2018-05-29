@@ -89,7 +89,7 @@
                     </div>
                     <div class="col-xs-7">
                         <span t-field="doc.incoterm.code"/>
-                        <span t-field="doc.delivery_points"/>
+                        <span t-field="doc.delivery_points"/><span t-if="doc.use_incoterms_note"><sup>*</sup></span>
                     </div>
                 </div>
                 <t t-if="doc.carrier_id">
@@ -107,7 +107,7 @@
                         <strong>Lead Time:</strong>
                     </div>
                     <div class="col-xs-7">
-                        <span t-field="doc.lead_time"/> days
+                        <span t-field="doc.lead_time"/> days<span t-if="doc.use_leadtime_note"><sup>*</sup></span>
                     </div>
                 </div>
                 <div class="row">
@@ -115,7 +115,7 @@
                         <strong>Payment Terms:</strong>
                     </div>
                     <div class="col-xs-7">
-                        <span t-field="doc.payment_term_id"/>
+                        <span t-field="doc.payment_term_id"/><span t-if="doc.use_payment_note"><sup>*</sup></span>
                     </div>
                 </div>
             </div>
