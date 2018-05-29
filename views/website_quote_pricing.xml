@@ -112,13 +112,13 @@
 				<section id="notes" class="container" t-if="quotation.use_payment_note or quotation.use_leadtime_note or quotation.use_incoterms_note">
 					<h2 class="page-header">Notes</h2>
 					<t t-if="quotation.use_payment_note">
-						<span>* </span><p t-field="quotation.payment_note"/>
+						<span>* </span><span t-field="quotation.payment_note"/>
 					</t>
 					<t t-if="quotation.use_leadtime_note">
-						<span>* </span><p t-field="quotation.leadtime_note"/>
+						<span>* </span><span t-field="quotation.leadtime_note"/>
 					</t>
 					<t t-if="quotation.use_incoterms_note">
-						<span>* </span><p t-field="quotation.incoterms_note"/>
+						<span>* </span><span t-field="quotation.incoterms_note"/>
 					</t>
 				</section>
 			</xpath>
