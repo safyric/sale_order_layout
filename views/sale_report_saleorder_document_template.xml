@@ -63,7 +63,7 @@
                             <strong>Last Revision:</strong>
                         </div>
                         <div class="col-xs-7">
-                            <span t-field="doc.current_revision_id.create_date"/>
+                            <span t-field="doc.old_revision_ids.create_date"/>
                         </div>
                     </div>
                 </t>
