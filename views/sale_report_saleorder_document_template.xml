@@ -188,7 +188,7 @@
             </t>
         </xpath>
         <xpath expr="//p[@t-field='doc.note']" position="before">
-            <t t-if="doc.use_payment_note or doc.use_leadtime_note or doc.use_incoterms_note">
+            <t t-if="doc.use_payment_note or doc.use_leadtime_note or doc.use_incoterms_note or doc.use_other_note">
                 <h2>Remarks</h2>
                 <t t-if="doc.use_payment_note">
                     <p><span>* </span><span t-field="doc.payment_note"/></p>
@@ -198,6 +198,9 @@
                 </t>
                 <t t-if="doc.use_incoterms_note">
                     <p><span>* </span><span t-field="doc.incoterms_note"/></p>
+                </t>
+                <t t-if="doc.use_other_note">
+                    <p><span t-field="doc.other_note"/></p>
                 </t>
             </t>
         </xpath>
