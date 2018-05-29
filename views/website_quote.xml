@@ -41,7 +41,7 @@
 							<label class="col-sm-5 col-xs-5 text-right">Incoterms:</label>
 						<div class="col-sm-7 col-xs-7">
 							<span t-field="quotation.incoterm.code"/><![CDATA[&nbsp;]]>
-							<span t-field="quotation.delivery_points"/>
+							<span t-field="quotation.delivery_points"/><span t-if="quotation.use_incoterms_note"><sup>*</sup></span>
 						</div>
 						<div class="clearfix"/>
 						<div t-if="quotation.carrier_id">
@@ -53,13 +53,13 @@
 						<div class="clearfix"/>
 						<label class="col-sm-5 col-xs-5 text-right">Lead Time:</label>
 						<div class="col-sm-7 col-xs-7">
-							<span t-field="quotation.lead_time"/><![CDATA[&nbsp;]]>days
+							<span t-field="quotation.lead_time"/><![CDATA[&nbsp;]]>days<span t-if="quotation.use_leadtime_note"><sup>*</sup></span>
 						</div>
 						<div class="clearfix"/>
 						<div t-if="quotation.payment_term_id">
 							<label class="col-sm-5 col-xs-5 text-right">Payment Terms:</label>
 							<div class="col-sm-7 col-xs-7">
-								<span t-field="quotation.payment_term_id"/>
+								<span t-field="quotation.payment_term_id"/><span t-if="quotation.use_payment_note"><sup>*</sup></span>
 							</div>
 						</div>
 					</div>
