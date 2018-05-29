@@ -120,6 +120,9 @@
 					<t t-if="quotation.use_incoterms_note">
 						<p><span>* </span><span t-field="quotation.incoterms_note"/></p>
 					</t>
+					<t t-if="quotation.use_other_note">
+						<p><span t-field="quotation.other_note"/></p>
+					</t>
 				</section>
 			</xpath>
 		</template>
