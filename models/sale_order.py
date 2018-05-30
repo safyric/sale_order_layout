@@ -23,3 +23,4 @@ class SaleOrder(models.Model):
     leadtime_note = fields.Text(string='Lead Time Note')
     use_other_note = fields.Boolean(string='Other Note')
     other_note = fields.Text(string='Other Note')
+    note = fields.Html(string='Terms and Conditions')
