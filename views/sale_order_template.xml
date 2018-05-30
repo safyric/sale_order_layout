@@ -90,6 +90,9 @@
 						</div>
 					</div>
 				</xpath>
+				<xpath expr="" position="replace">
+					<field name="note" placeholder="Setup default terms and conditions in your sales settings ..."/>
+				</xpath>
 			</field>
 		</record>
 	</data>
