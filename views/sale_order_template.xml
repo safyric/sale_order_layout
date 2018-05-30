@@ -91,8 +91,10 @@
 					</div>
 				</xpath>
 				<xpath expr="//field[@name='note']" position="replace">
-					<h2><label for="note" string="Terms &nbsp; Conditions"/></h2>
-					<field name="note" placeholder="Setup default terms and conditions in your sales settings ..."/>
+					<h2><label for="note" string="Terms and Conditions"/></h2>
+					<div style="height: 60px">
+						<field name="note" placeholder="Setup default terms and conditions in your sales settings ..."/>
+					</div>
 				</xpath>
 			</field>
 		</record>
