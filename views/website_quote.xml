@@ -51,9 +51,11 @@
 							</div>
 						</div>
 						<div class="clearfix"/>
-						<label class="col-sm-5 col-xs-5 text-right">Lead Time:</label>
-						<div class="col-sm-7 col-xs-7">
-							<span t-field="quotation.lead_time"/><![CDATA[&nbsp;]]>days<span t-if="quotation.use_leadtime_note"><sup>*</sup></span>
+						<div t-if="quotation.lead_time">
+							<label class="col-sm-5 col-xs-5 text-right">Lead Time:</label>
+							<div class="col-sm-7 col-xs-7">
+								<span t-field="quotation.lead_time"/><![CDATA[&nbsp;]]>days<span t-if="quotation.use_leadtime_note"><sup>*</sup></span>
+							</div>
 						</div>
 						<div class="clearfix"/>
 						<div t-if="quotation.payment_term_id">
