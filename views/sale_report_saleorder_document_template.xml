@@ -92,7 +92,7 @@
                         </div>
                     </div>
                 </t>
-                <div class="row">
+                <div t-if="doc.lead_time" class="row">
                     <div class="col-xs-5 text-right">
                         <strong>Lead Time:</strong>
                     </div>
