@@ -24,8 +24,3 @@ class SaleOrder(models.Model):
     use_other_note = fields.Boolean(string='Other Note')
     other_note = fields.Text(string='Other Note')
     note = fields.Html(string='Terms and Conditions')
-
-class ResConfigSetting(models.Model):
-    _inherit = 'res.config.settings'
-
-    sale_note = fields.Html(related='company_id.sale_note', string="Terms & Conditions")
