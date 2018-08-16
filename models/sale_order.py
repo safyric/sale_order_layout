@@ -28,4 +28,4 @@ class SaleOrder(models.Model):
 class ResConfigSetting(models.Model):
     _inherit = 'res.config.settings'
 
-    sale_note = fields.html(related='company_id.sale_note', string="Terms & Conditions")
+    sale_note = fields.Html(related='company_id.sale_note', string="Terms & Conditions")
