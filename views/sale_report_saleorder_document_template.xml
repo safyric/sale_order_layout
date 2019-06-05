@@ -112,9 +112,9 @@
             <div class="clearfix"/>
         </xpath>        
         <xpath expr="//div[@id='informations']" position="replace"/>
-        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/thead/tr/th[3]" position="replace">Qty</xpath>
-        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/thead/tr/th[4]" position="replace"/>
-        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/thead/tr/th[5]" position="replace"/>
+        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/tr/th[3]" position="replace">Qty</xpath>
+        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/tr/th[4]" position="replace"/>
+        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/tr/th[5]" position="replace"/>
         <xpath expr="//table[hasclass('table', 'table-condensed')]/tbody/t[1]/t[2]/tr[1]/td[4]" position="replace"/>
         <xpath expr="//table[hasclass('table', 'table-condensed')]/tbody/t[1]/t[2]/tr[1]/td[5]" position="replace"/>
 
