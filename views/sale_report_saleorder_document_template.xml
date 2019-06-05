@@ -112,71 +112,12 @@
             <div class="clearfix"/>
         </xpath>        
         <xpath expr="//div[@id='informations']" position="replace"/>
-        <xpath expr="//table[@class='table table-condensed']//thead" position="replace">
-            <tr>
-                <th>No.</th>
-                <th>Description</th>
-                <th class="text-right">Qty</th>
-                <th>UoM</th>
-                <th class="text-right">Unit Price</th>
-                <th class="text-right" groups="sale.group_show_price_subtotal">Amount</th>
-                <th class="text-right price_tax_included" groups="sale.group_show_price_total">Total Price</th>
-            </tr>
-        </xpath>        
-        <xpath expr="//tbody[@class='sale_tbody']" position="replace">
-            <t t-foreach="page" t-as="layout_category">
-                <t t-if="layout_category_size &gt; 1 or page_size &gt; 1" groups="sale.group_sale_layout">
-                    <tr class="active">
-                        <td colspan="7" style="font-weight: bold; border-bottom: 1px solid black;">&amp;bull;
-                            <t t-esc="layout_category['name']"/>
-                        </td>
-                    </tr>
-                </t>
+        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/thead/tr/th[3]" position="replace">Qty</xpath>
+        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/thead/tr/th[4]" position="replace"/>
+        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/thead/tr/th[5]" position="replace"/>
+        <xpath expr="//table[hasclass('table', 'table-condensed')]/tbody/t[1]/t[2]/tr[1]/td[4]" position="replace"/>
+        <xpath expr="//table[hasclass('table', 'table-condensed')]/tbody/t[1]/t[2]/tr[1]/td[5]" position="replace"/>
 
-                <!-- Lines associated -->
-                <t t-foreach="layout_category['lines']" t-as="l">
-                    <tr>
-                        <td>
-                            <span t-field="l.x_line_no"/>
-                        </td>
-                        <td>
-                            <t t-if="l.x_tag_no"><span t-field="l.x_tag_no"/><br /></t>
-                            <span t-field="l.name"/>
-                            <t t-if="l.x_notes">
-                                <br />
-                                <span>-----------------</span><br />
-                                <span t-field="l.x_notes"/>
-                            </t>
-                        </td>
-                        <td class="text-right">
-                            <span t-field="l.product_uom_qty"/>
-                        </td>
-                        <td>
-                            <span t-field="l.product_uom" groups="product.group_uom"/>
-                        </td>
-                        <td class="text-right">
-                            <span t-field="l.x_price_unit"/>
-                        </td>
-                        <td class="text-right" groups="sale.group_show_price_subtotal">
-                            <span t-field="l.price_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/>
-                        </td>
-                        <td class="text-right" groups="sale.group_show_price_total">
-                            <span t-field="l.price_total" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/>
-                        </td>
-                    </tr>
-                </t>
-
-                <t t-if="(layout_category_size &gt; 1 or page_size &gt; 1) and layout_category['subtotal']" groups="sale.group_sale_layout">
-                    <tr class="text-right">
-                        <td colspan="6">
-                            <strong>Subtotal: </strong>
-                            <t t-set="subtotal" t-value="sum(line.price_subtotal for line in layout_category['lines'])"/>
-                            <span t-esc="subtotal" t-options="{'widget': 'monetary', 'display_currency': doc.pricelist_id.currency_id}"/>
-                        </td>
-                    </tr>
-                </t>
-            </t>
-        </xpath>
         <xpath expr="//p[@t-field='doc.note']" position="before">
             <t t-if="doc.use_payment_note or doc.use_leadtime_note or doc.use_incoterms_note or doc.use_other_note">
                 <h2>Remarks</h2>
