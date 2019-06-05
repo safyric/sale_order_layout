@@ -130,8 +130,10 @@
                 </t>
             </t>
         </xpath>
+    
         <xpath expr="//p[@t-field='doc.note']" position="replace">
             <t t-if="doc.note">
+                <p style="page-break-before:always;"/>
                 <h2>Terms &amp; Conditions</h2>
                 <p t-field="doc.note"/>
             </t>
