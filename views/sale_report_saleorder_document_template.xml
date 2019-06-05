@@ -112,11 +112,6 @@
             <div class="clearfix"/>
         </xpath>        
         <xpath expr="//div[@id='informations']" position="replace"/>
-        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/tr/th[2]" position="replace">Qty</xpath>
-        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/tr/th[4]" position="replace"/>
-        <xpath expr="//table[hasclass('table', 'table-condensed')]/thead/tr/th[5]" position="replace"/>
-        <xpath expr="//table[hasclass('table', 'table-condensed')]/tbody/t[1]/t[2]/tr[1]/td[4]" position="replace"/>
-        <xpath expr="//table[hasclass('table', 'table-condensed')]/tbody/t[1]/t[2]/tr[1]/td[5]" position="replace"/>
 
         <xpath expr="//p[@t-field='doc.note']" position="before">
             <t t-if="doc.use_payment_note or doc.use_leadtime_note or doc.use_incoterms_note or doc.use_other_note">
