@@ -19,7 +19,7 @@
         </xpath>
         
         <xpath expr="//div[@class='page']//div[2]" position="replace">
-            <div class="col-xs-auto">
+            <div class="col-xs-3">
                 <t t-if="doc.state in ['draft','sent']">
                     <strong>Customer:</strong>
                     <div t-field="doc.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;, &quot;email&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
@@ -32,7 +32,7 @@
                     </t>
                 </t>
             </div>
-            <div class="col-xs-auto">
+            <div class="col-xs-3">
                 <t t-if="doc.partner_shipping_id == doc.partner_invoice_id                              and doc.partner_invoice_id != doc.partner_id                              or doc.partner_shipping_id != doc.partner_invoice_id">
                     <div t-if="doc.partner_shipping_id != doc.partner_invoice_id">
                         <strong>Shipping Address:</strong>
@@ -40,7 +40,7 @@
                     </div>
                 </t>
             </div>
-            <div class="col-xs-auto">
+            <div class="col-xs-4">
                 <div class="row">
                     <div class="col-xs-5 text-right">
                         <strong>Your Contact:</strong>
