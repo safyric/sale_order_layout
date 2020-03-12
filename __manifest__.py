@@ -3,7 +3,7 @@
     'name': "Sale Order Layout Customize",
     'author': "Safyric Co., Ltd.",
     'website': "https://www.safyric.com",
-    'version': '0.4',
+    'version': '12.0.0.4',
 
 	'depends': [
         'sale_management',
