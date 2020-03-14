@@ -6,15 +6,11 @@
     'version': '12.0.0.4',
 
 	'depends': [
-        'sale_management',
+        'sale',
     ],
 
     'data': [
-        'views/sale_report_saleorder_document_template.xml',
-        'views/sale_order_template.xml',
-        'views/sale_stock.xml',
-        'views/website_quote_pricing.xml',
-	'views/website_quote.xml',
+        'views/sale_views.xml',
     ],
     'installable': True,
 }
