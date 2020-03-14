@@ -1,100 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<data>
-		<record  model="ir.ui.view" id="sale_order_view_form_inherit">
-			<field name="name">sale.order.form</field>
-			<field name="model">sale.order</field>
-			<field name="inherit_id" ref="sale.view_order_form"/>
-			<field name="arch" type="xml">
-				<xpath expr="//group[@name='sales_person']//field[@name='client_order_ref']" position="replace"/>
-				<xpath expr="//field[@name='partner_shipping_id']" position="after">
-					<field name="client_order_ref" attrs="{'readonly':[('state', '=', 'sent')]}"/>
-				</xpath>
-				<xpath expr="//field[@name='payment_term_id']" position="after">
-					<label for="lead_time"/>
-					<div>
-						<field name="lead_time" string="Lead Time" class="oe_inline" attrs="{'readonly':[('state', '=', 'sent')]}"/> days
-					</div>
-					<label for="incoterm"/>
-					<div>
-						<field name="incoterm" string="Incoterms" class="oe_inline" attrs="{'readonly':[('state', '=', 'sent')]}"/><![CDATA[&nbsp;]]>
-						<field name="delivery_points" string="Delivery Point" class="oe_inline" attrs="{'readonly':[('state', '=', 'sent')]}"/>
-					</div>
-				</xpath>
-				<xpath expr="//field[@name='note']" position="before">
-					<div class="row mt16 o_settings_container">
-						<div class="col-xs-12 col-md-6 o_setting_box">
-							<div class="o_setting_left_pane">
-								<field name="use_payment_note" attrs="{'readonly':[('state', '=', 'sent')]}"/>
-							</div>
-							<div class="o_setting_right_pane">
-								<label for="use_payment_note"/>
-								<div class="text-muted">
-									Show notes to payment terms on orders
-								</div>
-								<div class="content-group" attrs="{'invisible': [('use_payment_note','=',False)]}">
-									<div class="mt16">
-										<field name="payment_note" placeholder="Insert your notes here..." attrs="{'readonly':[('state', '=', 'sent')]}"/>
-									</div>
-								</div>
-							</div>
-						</div>
-					
-						<div class="col-xs-12 col-md-6 o_setting_box">
-							<div class="o_setting_left_pane">
-								<field name="use_incoterms_note" attrs="{'readonly':[('state', '=', 'sent')]}"/>
-							</div>
-							<div class="o_setting_right_pane">
-								<label for="use_incoterms_note" attrs="{'readonly':[('state', '=', 'sent')]}"/>
-								<div class="text-muted">
-									Show notes to incoterms on orders
-								</div>
-								<div class="content-group" attrs="{'invisible': [('use_incoterms_note','=',False)]}">
-									<div class="mt16">
-										<field name="incoterms_note" placeholder="Insert your notes here..." attrs="{'readonly':[('state', '=', 'sent')]}"/>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-12 col-md-6 o_setting_box">
-							<div class="o_setting_left_pane">
-								<field name="use_leadtime_note" attrs="{'readonly':[('state', '=', 'sent')]}"/>
-							</div>
-							<div class="o_setting_right_pane">
-								<label for="use_leadtime_note"/>
-								<div class="text-muted">
-									Show notes to lead time on orders
-								</div>
-								<div class="content-group" attrs="{'invisible': [('use_leadtime_note','=',False)]}">
-									<div class="mt16">
-										<field name="leadtime_note" placeholder="Insert your notes here..." attrs="{'readonly':[('state', '=', 'sent')]}"/>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-12 col-md-6 o_setting_box">
-							<div class="o_setting_left_pane">
-								<field name="use_other_note" attrs="{'readonly':[('state', '=', 'sent')]}"/>
-							</div>
-							<div class="o_setting_right_pane">
-								<label for="use_other_note"/>
-								<div class="text-muted">
-									Show notes to other note on orders
-								</div>
-								<div class="content-group" attrs="{'invisible': [('use_other_note','=',False)]}">
-									<div class="mt16">
-										<field name="other_note" placeholder="Insert your notes here..." attrs="{'readonly':[('state', '=', 'sent')]}"/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</xpath>
-				<xpath expr="//field[@name='note']" position="replace">
-					<h2><label for="note" string="Terms and Conditions"/></h2>
-					<field name="note" placeholder="Setup default terms and conditions in your sales settings ..."/>
-				</xpath>
-			</field>
-		</record>
-	</data>
+    <data>
+        <record  model="ir.ui.view" id="sale_order_view_form_inherit">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='sales_person']//field[@name='client_order_ref']" position="replace"/>
+                <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                    <field name="client_order_ref" attrs="{'readonly':[('state', '=', 'sent')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <label for="lead_time"/>
+                    <div>
+                        <field name="lead_time" string="Lead Time" class="oe_inline" attrs="{'readonly':[('state', '=', 'sent')]}"/> days
+                    </div>
+                    <label for="incoterm"/>
+                    <div>
+                        <field name="incoterm" string="Incoterms" class="oe_inline" attrs="{'readonly':[('state', '=', 'sent')]}"/><![CDATA[&nbsp;]]>
+                        <field name="delivery_points" string="Delivery Point" class="oe_inline" attrs="{'readonly':[('state', '=', 'sent')]}"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='note']" position="before">
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="use_payment_note" attrs="{'readonly':[('state', '=', 'sent')]}"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="use_payment_note"/>
+                                <div class="text-muted">
+                                    Show notes to payment terms on orders
+                                </div>
+                                <div class="content-group" attrs="{'invisible': [('use_payment_note','=',False)]}">
+                                    <div class="mt16">
+                                        <field name="payment_note" placeholder="Insert your notes here..." attrs="{'readonly':[('state', '=', 'sent')]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="use_incoterms_note" attrs="{'readonly':[('state', '=', 'sent')]}"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="use_incoterms_note" attrs="{'readonly':[('state', '=', 'sent')]}"/>
+                                <div class="text-muted">
+                                    Show notes to incoterms on orders
+                                </div>
+                                <div class="content-group" attrs="{'invisible': [('use_incoterms_note','=',False)]}">
+                                    <div class="mt16">
+                                        <field name="incoterms_note" placeholder="Insert your notes here..." attrs="{'readonly':[('state', '=', 'sent')]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="use_leadtime_note" attrs="{'readonly':[('state', '=', 'sent')]}"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="use_leadtime_note"/>
+                                <div class="text-muted">
+                                    Show notes to lead time on orders
+                                </div>
+                                <div class="content-group" attrs="{'invisible': [('use_leadtime_note','=',False)]}">
+                                    <div class="mt16">
+                                        <field name="leadtime_note" placeholder="Insert your notes here..." attrs="{'readonly':[('state', '=', 'sent')]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="use_other_note" attrs="{'readonly':[('state', '=', 'sent')]}"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="use_other_note"/>
+                                <div class="text-muted">
+                                    Show notes to other note on orders
+                                </div>
+                                <div class="content-group" attrs="{'invisible': [('use_other_note','=',False)]}">
+                                    <div class="mt16">
+                                        <field name="other_note" placeholder="Insert your notes here..." attrs="{'readonly':[('state', '=', 'sent')]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='note']" position="replace">
+                    <h2><label for="note" string="Terms and Conditions"/></h2>
+                    <field name="note" placeholder="Setup default terms and conditions in your sales settings ..."/>
+                </xpath>
+            </field>
+        </record>
+    </data>
 </odoo>
