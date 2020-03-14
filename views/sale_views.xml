@@ -7,6 +7,7 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='validity_date']" position="before">
+                    <field name="incoterm" widget="selection"/>
                     <field name="lead_time" string="Lead Time" class="oe_inline" attrs="{'readonly':[('state', '=', 'sent')]}"/> days
                 </xpath>
             </field>
