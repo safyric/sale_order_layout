@@ -18,6 +18,9 @@
                     <field name="validity_date" position="before">
                         <field name="incoterm" widget="selection"/>
                     </field>
+                    <field name="validity_date" position="before">
+                        <field name="delivery_place" widget="selection"/>
+                    </field>
                 </data>
             </field>
         </record>
