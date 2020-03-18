@@ -5,7 +5,7 @@
         <xpath expr="//t/t[3]" position="replace"/>
         <xpath expr="//h2" position="after">
             <div class="row mt32 mb32">
-                <div class="col-auto mw-100 mb-2">
+                <div class="col-auto mw-100">
                     <strong>Customer:</strong>
                     <p class="m-0" t-field="doc.partner_id"
                        t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
