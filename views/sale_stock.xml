@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <odoo>
     <data>
-        <record id="view_order_form_inherit_sale_stock_inherit" model="ir.ui.view">
-            <field name="name">sale.order.form.sale.stock.inherit</field>
+        <record id="view_order_form_inherit_sale_stock" model="ir.ui.view">
+            <field name="name">sale.order.form.sale.stock</field>
             <field name="model">sale.order</field>
-            <field name="inherit_id" ref="sale_stock.view_order_form_inherit_sale_stock"/>
+            <field name="inherit_id" ref="sale.vview_order_form_inherit_sale_stock"/>
             <field name="arch" type="xml">
-            </field>
+
+           </field>
         </record>
     </data>
 </odoo>
