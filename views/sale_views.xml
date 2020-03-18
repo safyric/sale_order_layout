@@ -15,6 +15,9 @@
                     <field name="validity_date" position="before">
                         <field name="user_id"/>
                     </field>
+                    <field name="validity_date" position="before">
+                        <field name="incoterm" widget="selection"/>
+                    </field>
                 </data>
             </field>
         </record>
