@@ -9,6 +9,9 @@
                 <field name="partner_id" position="before">
                     <field name="client_order_ref"/>
                 </field>
+                <field name="validity_date" position="before">
+                    <field name="incoterm"/>
+                </field>
             </field>
         </record>
     </data>
