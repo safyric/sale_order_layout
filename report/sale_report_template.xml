@@ -15,10 +15,17 @@
                     <p t-field="doc.partner_invoice_id"
                        t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
                 </div>
-                <div class="col-md-4">
-                    
+                <div class="col-md-4" id="information">
+                    <div class="col-xs-5">
+                        <strong>Your Contact:</strong>
+                    </div>
+                    <div class="col-xs-7">
+                        <div t-field="doc.user_id" 
+                             t-options="{&quot;widget&quot;: &quot;contact&quot;,&quot;fields&quot;: [&quot;name&quot;, &quot;phone&quot;, &quot;email&quot;]}"/>
+                    </div>
                 </div>
             </div>
         </xpath>
+        <xpath expr="//div[@id='information']" position="replace"/>
     </template>
 </odoo>
