@@ -7,11 +7,9 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <data>
+                    <field name="client_order_ref" position="replace"/>
                     <field name="partner_id" position="before">
                         <field name="client_order_ref"/>
-                    </field>
-                    <field name="validity_date" position="before">
-                        <field name="incoterm"/>
                     </field>
                 </data>
             </field>
