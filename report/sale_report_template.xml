@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
-        <xpath expr="//t//t[@t-set='address']" position="before">
+        <xpath expr="//t//t[@t-set='address']" position="attributes">
+            <attribute name="t-set">information_block</strong>
+        </xpath>        
+        <xpath expr="//t//t[2]/div" position="before">
             <strong>Customer:</strong>
         </xpath>
         <xpath expr="//t/t[3]" position="replace"/>
