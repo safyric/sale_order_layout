@@ -4,5 +4,6 @@
         <xpath expr="//t//t[@t-set='address']" position="before">
             <strong>Customer:</strong>
         </xpath>
+        <xpath expr="//t/t[3]" position="replace"/>
     </template>
 </odoo>
