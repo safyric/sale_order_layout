@@ -3,6 +3,7 @@
     <template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
         <xpath expr="//t/t[2]" position="replace"/>     
         <xpath expr="//t/t[3]" position="replace"/>
+        <xpath expr="//div[@id='information']" position="replace"/>
         <xpath expr="//h2" position="after">
             <div class="row mt32 mb32">
                 <div class="col-md-4">
@@ -16,16 +17,15 @@
                        t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
                 </div>
                 <div class="col-md-4" id="information">
-                    <div class="col-xs-5">
+                    <!--<div class="col-xs-5">
                         <strong>Your Contact:</strong>
                     </div>
                     <div class="col-xs-7">
                         <div t-field="doc.user_id" 
                              t-options="{&quot;widget&quot;: &quot;contact&quot;,&quot;fields&quot;: [&quot;name&quot;, &quot;phone&quot;, &quot;email&quot;]}"/>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </xpath>
-        <xpath expr="//div[@id='information']" position="replace"/>
     </template>
 </odoo>
