@@ -6,7 +6,7 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form_inherit_sale_stock"/>
             <field name="arch" type="xml">
-				<xpath expr="//field[@name='incoterms']" position="replace"/>
+				<xpath expr="//field[@name='incoterm']" position="replace"/>
 			</field>
 		</record>
     </data>
