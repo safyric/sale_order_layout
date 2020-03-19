@@ -55,5 +55,8 @@
                 </div>
             </div>
         </xpath>
+        <xpath expr="//table" position="attributes">
+            <attribute name="style">font-size: 12px;</attribute>
+        </xpath>
     </template>
 </odoo>
