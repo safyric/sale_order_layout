@@ -21,34 +21,34 @@
                         <div class="col-4">
                             <strong>Sales Rep.:</strong>                
                         </div>
-                        <div class="col-8">
+                        <div class="col-auto">
                             <p class="m-0" t-field="doc.user_id"/>
                         </div>
                         <div class="col-4" t-if="doc.date_order and doc.state in ['draft','sent']">
                             <strong>Quote Date:</strong>
                         </div>
-                        <div class="col-4" t-if="doc.confirmation_date and doc.state not in ['draft','sent']">
+                        <div class="col-auto" t-if="doc.confirmation_date and doc.state not in ['draft','sent']">
                             <strong>Date Ordered:</strong>
                         </div>
-                        <div class="col-8">
+                        <div class="col-auto">
                             <p class="m-0" t-field="doc.confirmation_date"/>
                         </div>
                         <div class="col-4" t-if="doc.validity_date and doc.state in ['draft', 'sent']" >
                             <strong>Expiry Date:</strong>                
                         </div>
-                        <div class="col-8">
+                        <div class="col-auto">
                             <p class="m-0" t-field="doc.validity_date"/>
                         </div>
                         <div class="col-4">
                             <strong>Your Ref.:</strong>                
                         </div>
-                        <div class="col-8">
+                        <div class="col-auto">
                             <p class="m-0" t-field="doc.user_id"/>
                         </div>
                         <div class="col-4">
                             <strong>Payment Terms:</strong>                
                         </div>
-                        <div class="col-8">
+                        <div class="col-auto">
                             <p class="m-0" t-field="doc.payment_term_id"/>
                         </div>
                     </div>
