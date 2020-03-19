@@ -18,16 +18,16 @@
                 </div>
                 <div class="col-4" id="informations">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-6">
                             <strong>Sales Rep.:</strong>                
                         </div>
-                        <div class="col">
+                        <div class="col-6">
                             <p class="m-0" t-field="doc.user_id"/>
                         </div>
-                        <div class="col" t-if="doc.date_order and doc.state in ['draft','sent']">
+                        <div class="col-6" t-if="doc.date_order and doc.state in ['draft','sent']">
                             <strong>Quote Date:</strong>
                         </div>
-                        <div class="col" t-if="doc.confirmation_date and doc.state not in ['draft','sent']">
+                        <div class="col-6" t-if="doc.confirmation_date and doc.state not in ['draft','sent']">
                             <strong>Date Ordered:</strong>
                         </div>
                         <div class="col">
