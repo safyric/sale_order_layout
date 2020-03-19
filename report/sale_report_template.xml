@@ -9,7 +9,7 @@
                 <div class="col-md">
                     <strong>Customer:</strong>
                     <p class="m-0" t-field="doc.partner_id"
-                       t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}' />
+                       t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
                 </div>
                 <div class="col-md">
                     <strong>Invoicing Address:</strong>
@@ -28,7 +28,7 @@
                     <div class="col-md-4">
                         <div t-field="doc.user_id" 
                              t-options="{&quot;widget&quot;: &quot;contact&quot;,&quot;fields&quot;: [&quot;name&quot;, &quot;phone&quot;, &quot;email&quot;]}"/>
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </xpath>
