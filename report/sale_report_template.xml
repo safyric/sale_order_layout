@@ -24,31 +24,31 @@
                         <div class="col-6">
                             <p class="m-0" t-field="doc.user_id"/>
                         </div>
-                        <div class="col-6" t-if="doc.date_order and doc.state in ['draft','sent']">
+                        <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-6" >
                             <strong>Quote Date:</strong>
                         </div>
-                        <div class="col-6" t-if="doc.confirmation_date and doc.state not in ['draft','sent']">
+                        <div t-if="doc.confirmation_date and doc.state not in ['draft','sent']" class="col-6">
                             <strong>Date Ordered:</strong>
                         </div>
-                        <div class="col">
+                        <div class="col-6">
                             <p class="m-0" t-field="doc.confirmation_date"/>
                         </div>
-                        <div class="col" t-if="doc.validity_date and doc.state in ['draft', 'sent']" >
+                        <div class="col-6" t-if="doc.validity_date and doc.state in ['draft', 'sent']" >
                             <strong>Expiry Date:</strong>                
                         </div>
-                        <div class="col">
+                        <div class="col-6">
                             <p class="m-0" t-field="doc.validity_date"/>
                         </div>
-                        <div class="col">
+                        <div class="col-6">
                             <strong>Your Ref.:</strong>                
                         </div>
-                        <div class="col">
+                        <div class="col-6">
                             <p class="m-0" t-field="doc.user_id"/>
                         </div>
-                        <div class="col">
+                        <div class="col-6">
                             <strong>Payment Terms:</strong>                
                         </div>
-                        <div class="col">
+                        <div class="col-6">
                             <p class="m-0" t-field="doc.payment_term_id"/>
                         </div>
                     </div>
