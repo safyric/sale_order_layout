@@ -5,7 +5,7 @@
         <xpath expr="//t/t[3]" position="replace"/>
         <xpath expr="//div[@id='informations']" position="replace"/>
         <xpath expr="//h2" position="after">
-            <div class="row mt32 mb32" style="font-size: 10px;">
+            <div class="row mt32 mb32" style="font-size: 12px;">
                 <div class="col-4">
                     <strong>Customer:</strong>
                     <p class="m-0" t-field="doc.partner_id"
