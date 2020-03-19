@@ -18,10 +18,10 @@
                 </div>
                 <div class="col-4" id="informations">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-5">
                             <strong>Sales Rep.:</strong>                
                         </div>
-                        <div class="col-8">
+                        <div class="col-7">
                             <p class="m-0" t-field="doc.user_id"/>
                         </div>
                     </div>
