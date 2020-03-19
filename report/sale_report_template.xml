@@ -6,17 +6,22 @@
         <xpath expr="//div[@id='informations']" position="replace"/>
         <xpath expr="//h2" position="after">
             <div class="row mt32 mb32">
-                <div class="col-md-3">
+                <div class="col-md">
                     <strong>Customer:</strong>
                     <p class="m-0" t-field="doc.partner_id"
                        t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}' />
                 </div>
-                <div class="col-md-3">
+                <div class="col-md">
                     <strong>Invoicing Address:</strong>
                     <p class="m-0" t-field="doc.partner_invoice_id"
                        t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
                 </div>
-                <div class="col-md-6" id="informations">
+                <div class="col-md">
+                    <strong>Shipping Address:</strong>
+                    <p class="m-0" t-field="doc.partner_shipping_id"
+                       t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                </div>
+                <div class="col-md">
                     <div class="col-md-2">
                         <strong>Your Contact:</strong>
                     </div>
