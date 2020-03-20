@@ -17,7 +17,7 @@
                        t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
                 </div>
                 <div class="m-0" id="informations" style="width: 40%;">
-                    <div class="row justify-content-end">
+                    <div class="row">
                         <div style="width: 40%;">
                             <strong>Sales Rep.:</strong>                
                         </div>
@@ -25,7 +25,7 @@
                             <p class="m-0" t-field="doc.user_id"/>
                         </div>
                     </div>
-                    <div>
+                    <div class="row">
                         <div t-if="doc.date_order and doc.state in ['draft','sent']" style="width: 40%;">
                             <strong>Quote Date:</strong>
                         </div>
@@ -36,7 +36,7 @@
                             <p class="m-0" t-field="doc.confirmation_date"/>
                         </div>
                     </div>
-                    <div>
+                    <div class="row">
                         <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" >
                             <strong>Expiry Date:</strong>                
                         </div>
@@ -44,7 +44,7 @@
                             <p class="m-0" t-field="doc.validity_date"/>
                         </div>
                     </div>
-                    <div t-if="doc.client_order_ref">
+                    <div class="row" t-if="doc.client_order_ref">
                         <div>
                             <strong>Your Ref.:</strong>                
                         </div>
@@ -52,7 +52,7 @@
                             <p class="m-0" t-field="doc.client_order_ref"/>
                         </div>
                     </div>
-                    <div>
+                    <div class="row">
                         <div>
                             <strong>Payment Terms:</strong>                
                         </div>
