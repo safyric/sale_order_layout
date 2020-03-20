@@ -4,6 +4,9 @@
         <xpath expr="//t/t[2]" position="replace"/>     
         <xpath expr="//t/t[3]" position="replace"/>
         <xpath expr="//div[@id='informations']" position="replace"/>
+        <xpath expr="//page" position="attributes">
+            <attribute name="style">font-size: 12px;</attribute>
+        </xpath>
         <xpath expr="//h2" position="after">
             <div class="row mt32 mb32">
                 <div class="m-0" style="width: 30%;">
