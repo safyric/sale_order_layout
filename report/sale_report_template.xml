@@ -24,7 +24,7 @@
                         <div style="width: 30%;">
                             <strong>Sales Rep.:</strong>                
                         </div>
-                        <div>
+                        <div style="width: 70%;">
                             <p class="m-0" t-field="doc.user_id"/>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                         <div style="width: 30%;">
                             <strong>Quote Date:</strong>
                         </div>
-                        <div>
+                        <div style="width: 70%;">
                             <p class="m-0" t-field="doc.date_order"/>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                         <div style="width: 30%;">
                             <strong>Date Ordered:</strong>
                         </div>
-                        <div>
+                        <div style="width: 70%;">
                             <p class="m-0" t-field="doc.confirmation_date"/>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         <div style="width: 30%;" t-if="doc.validity_date and doc.state in ['draft', 'sent']" >
                             <strong>Expiry Date:</strong>                
                         </div>
-                        <div>
+                        <div style="width: 70%;">
                             <p class="m-0" t-field="doc.validity_date"/>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                         <div style="width: 30%;">
                             <strong>Your Ref.:</strong>                
                         </div>
-                        <div>
+                        <div style="width: 70%;">
                             <p class="m-0" t-field="doc.client_order_ref"/>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <div style="width: 30%;">
                             <strong>Payment Terms:</strong>                
                         </div>
-                        <div>
+                        <div style="width: 70%;">
                             <p class="m-0" t-field="doc.payment_term_id"/>
                         </div>
                     </div>
