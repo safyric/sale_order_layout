@@ -4,6 +4,7 @@
         <xpath expr="//t/t[2]" position="replace"/>     
         <xpath expr="//t/t[3]" position="replace"/>
         <xpath expr="//div[@id='informations']" position="replace"/>
+        <xpath expr="//p[@t-if='doc.payment_term_id.note']" position="replace"/>
         <xpath expr="//div[@class='page']" position="attributes">
             <attribute name="style">font-size: 12px;</attribute>
         </xpath>
