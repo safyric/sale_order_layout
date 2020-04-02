@@ -82,4 +82,16 @@
             </td>
         </xpath>
     </template>
+    <template id="report_saleorder_document_inherit_sale_management" inherit_id="sale_management.report_saleorder_document_inherit_sale_management">
+        <xpath expr="//thead/tr/th[1]" position="after">
+            <th class="text-right">Quantity</th>
+
+        </xpath>
+        <xpath expr="//tbody/tr/td[1]" position="after">
+            <td class="text-right">
+                <span t-field="option.quantity"/>
+                <span t-field="option.uom_id"/>
+            </td>
+        </xpath>       
+    </template>
 </odoo>
