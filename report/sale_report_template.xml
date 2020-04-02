@@ -73,11 +73,12 @@
             </div>
         </xpath>
         <xpath expr="//thead/tr/th[2]" position="after">
-            <th class="text-left">Lead Time (Days)</th>
+            <th class="text-right">Lead Time</th>
         </xpath>
         <xpath expr="//tbody//tr//td[2]" position="after">
-            <td name="td_customer_lead" class="text-left">
+            <td name="td_customer_lead" class="text-right">
                 <span t-field="line.customer_lead"/>
+                <span> days</span>
             </td>
         </xpath>
     </template>
