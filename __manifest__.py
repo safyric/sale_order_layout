@@ -7,6 +7,7 @@
 
 	'depends': [
         'sale',
+	'sale_management',
     ],
 
     'data': [
