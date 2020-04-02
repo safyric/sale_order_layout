@@ -13,6 +13,7 @@
                     </field>
                     <field name="user_id" position="replace"/>
                     <field name="validity_date" position="before">
+                        <field name="date"/>
                         <field name="user_id"/>
                     </field>
                 </data>
