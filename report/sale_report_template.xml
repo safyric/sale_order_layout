@@ -84,14 +84,9 @@
     </template>
     <template id="report_saleorder_document_inherit_sale_management" inherit_id="sale_management.report_saleorder_document_inherit_sale_management">
         <xpath expr="//table[@class='table table-sm']/thead/tr/th[1]" position="after">
-            <th class="text-right">Lead Time</th>
             <th class="text-right">Quantity</th>
         </xpath>
         <xpath expr="//table[@class='table table-sm']/tbody/tr/td[1]" position="after">
-            <td class="text-right">
-                <span t-field="option.customer_lead"/>
-                <span> days</span>
-            </td>
             <td class="text-right">
                 <span t-field="option.quantity"/>
                 <span t-field="option.uom_id"/>
