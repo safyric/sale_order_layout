@@ -27,8 +27,12 @@
                         </div>
                         <div style="width: 60%;">
                             <p class="m-0" t-field="doc.user_id"/>
-                            <p class="m-0" t-if="doc.user_id.partner_id.email" t-field="doc.user_id.partner_id.email"/>
-                            <p class="m-0" t-if="doc.user_id.partner_id.mobile" t-field="doc.user_id.partner_id.mobile"/>
+                            <p class="m-0" t-if="doc.user_id.partner_id.email">
+                                <i class="fas fa-envelope"></i><span t-field="doc.user_id.partner_id.email"/>
+                            </p>
+                            <p class="m-0" t-if="doc.user_id.partner_id.mobile">
+                                <i class="fas fa-phone-alt"></i><span t-field="doc.user_id.partner_id.mobile"/>
+                            </p>
                         </div>
                     </div>
                     <div class="row" t-if="doc.date_order and doc.state in ['draft','sent']">
