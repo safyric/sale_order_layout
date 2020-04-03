@@ -77,8 +77,10 @@
         </xpath>
         <xpath expr="//tbody//tr//td[2]" position="after">
             <td name="td_customer_lead" class="text-right">
-                <span t-field="line.customer_lead"/>
-                <span> days</span>
+                <t t-if="line.customer_lead">
+                    <span t-field="line.customer_lead"/>
+                    <span> days</span>
+                </t>
             </td>
         </xpath>
     </template>
