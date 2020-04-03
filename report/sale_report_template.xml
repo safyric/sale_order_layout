@@ -27,6 +27,8 @@
                         </div>
                         <div style="width: 60%;">
                             <p class="m-0" t-field="doc.user_id"/>
+                            <p class="m-0" t-if="doc.user_id.partner_id.email" t-field="doc.user_id.partner_id.email"/>
+                            <p class="m-0" t-if="doc.user_id.partner_id.mobile" t-field="doc.user_id.partner_id.mobile"/>
                         </div>
                     </div>
                     <div class="row" t-if="doc.date_order and doc.state in ['draft','sent']">
