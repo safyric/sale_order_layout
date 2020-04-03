@@ -27,9 +27,7 @@
                         </div>
                         <div style="width: 60%;">
                             <p class="m-0" t-field="doc.user_id"/>
-                            <p class="m-0" t-if="doc.user_id.partner_id.email">
-                                <span class="fas fa-envelope-square"/><span t-field="doc.user_id.partner_id.email"/>
-                            </p>
+                            <p class="m-0" t-if="doc.user_id.partner_id.email" t-field="doc.user_id.partner_id.email"/>
                             <p class="m-0" t-if="doc.user_id.partner_id.mobile">
                                 <span class="fas fa-mobile"/><span t-field="doc.user_id.partner_id.mobile"/>
                             </p>
